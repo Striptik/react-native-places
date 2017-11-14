@@ -1,12 +1,20 @@
-import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
-import Button from "../../shared-ui/Button";
+import React from 'react';
+import { View, Text, TouchableOpacity } from 'react-native';
+import Button from '../../shared-ui/Button';
 
-const Home = () => (
+const Home = ({ navigation }) => (
+
   <View>
-    <Text>Home page</Text>
-    <Button label="Navigate >" onPress={() => {}} />
+    <Text>Home Screen</Text>
+    <Button
+      onPress={() => navigation.navigate('Places')}
+      label="navigate >"
+    />
   </View>
 );
+
+/*
+
+ */
 
 export default Home;
