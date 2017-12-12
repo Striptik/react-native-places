@@ -7,13 +7,16 @@ const styles = StyleSheet.create({
     marginTop: 10,
     borderWidth: 1,
     borderColor: "#CCC",
-    alignSelf: "flex-start"
-  }
+    alignSelf: "flex-start",
+  },
+  text: {
+    fontSize: 30
+  },
 });
 
 const AppButton = props => (
   <TouchableOpacity onPress={props.onPress} style={styles.button}>
-    <Text>{props.label}</Text>
+    <Text style={styles.text}>{props.label}</Text>
   </TouchableOpacity>
 );
 

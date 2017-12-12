@@ -3,7 +3,8 @@ import { Text, StyleSheet, TouchableOpacity } from "react-native";
 
 const styles = StyleSheet.create({
   item: {
-    fontSize: 32
+    fontSize: 32,
+    fontFamily: "KaushanScript-Regular"
   },
   itemVisited: {
     textDecorationLine: "line-through"

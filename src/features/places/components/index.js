@@ -15,7 +15,7 @@ import Footer from "./Footer";
 const styles = StyleSheet.create({
   root: {
     flex: 1,
-    backgroundColor: "#ecf0f1"
+    backgroundColor: "#ecf0f1",
   },
   content: {
     flex: 0,
