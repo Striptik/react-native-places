@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   StyleSheet
 } from "react-native";
+import { FormInput } from 'react-native-elements';
 
 const styles = StyleSheet.create({
   root: {
@@ -14,7 +15,8 @@ const styles = StyleSheet.create({
   },
   input: {
     flex: 1,
-    margin: 20,
+    marginLeft: 40,
+    marginTop: 20,
     height: 40,
     padding: 10,
     backgroundColor: "#FFF",
@@ -45,13 +47,16 @@ export default class Input extends Component {
   render() {
     return (
       <View style={styles.root}>
-        <TextInput
-          style={styles.input}
+
+
+        <FormInput
           placeholder="Enter a destination"
-          underlineColorAndroid="transparent"
           onChangeText={text => this.setState({ text })}
           value={this.state.text}
+          inputStyle={styles.input}
         />
+
+
         <TouchableOpacity style={styles.button} onPress={this.addHandler}>
           <Text>Add</Text>
         </TouchableOpacity>
