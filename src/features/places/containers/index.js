@@ -13,7 +13,7 @@ import withLoading from "../../../shared-ui/hoc/withLoading";
 import withError from "../../../shared-ui/hoc/withError";
 import { getVisiblePlaces } from "../../../redux/selectors/places";
 
-function mapDispatchToProps(dispatch) {
+const mapDispatchToProps = (dispatch) => {
   return {
     didMount() {
       dispatch(fetchPlaces());
@@ -30,7 +30,7 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-function mapStateToProps(state) {
+const mapStateToProps = (state) => {
   return {
     places: getVisiblePlaces(state),
     isLoading: state.places.isLoading,
